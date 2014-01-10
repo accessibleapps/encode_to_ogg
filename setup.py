@@ -7,9 +7,10 @@ setup(
  name = 'encode_to_ogg',
  version = __version__,
  description = __doc__,
-
+ data_files = [
+  ('', ['oggenc2.exe']),
+ ],
  py_modules = ['encode_to_ogg'],
- package_dir = {'': '.'},
  zip_safe = False,
  classifiers = [
   'Development Status :: 3 - Alpha',
