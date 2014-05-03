@@ -1,16 +1,16 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
-__version__ = "0.1"
+__version__ = "0.2"
 __doc__ = """Encode a wav file to .ogg"""
 
 setup(
  name = 'encode_to_ogg',
  version = __version__,
  description = __doc__,
- data_files = [
-  ('', ['oggenc2.exe']),
- ],
- py_modules = ['encode_to_ogg'],
+ packages = find_packages(),
+ package_data = {
+  'encode_to_ogg': ['oggenc2.exe'],
+ },
  zip_safe = False,
  classifiers = [
   'Development Status :: 3 - Alpha',
